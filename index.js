@@ -9,7 +9,7 @@ const con = mysql.createConnection({
     database: 'test'
 });
 
-function toSql(tableName) {
+function toXLSX(tableName) {
     // Open the MySQL connection
     con.connect((err) => {
         if (err) throw err;
@@ -71,4 +71,4 @@ function toSql(tableName) {
         });
     });
 }
-toSql('customer')
+toXLSX('customer')
