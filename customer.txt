@@ -1,0 +1,15 @@
+CREATE TABLE `customer` (
+  `id` bigint(20) NOT NULL,
+  `address` varchar(255) DEFAULT NULL,
+  `age` int(11) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `date` date DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+INSERT INTO customer (id, name, address, age, date) VALUES (5, "Jason Bourne", "California", 36, STR_TO_DATE('06 22 2019','%m %d %Y'));
+INSERT INTO customer (id, name, address, age, date) VALUES (1, "Jack Smith", "Massachusetts", 23, STR_TO_DATE('06 18 2019','%m %d %Y'));
+INSERT INTO customer (id, name, address, age, date) VALUES (2, "Adam Johnson", "New York", 27, STR_TO_DATE('06 19 2009','%m %d %Y'));
+INSERT INTO customer (id, name, address, age, date) VALUES (3, "Katherin Carter", "Washington DC", 26, STR_TO_DATE('06 20 2019','%m %d %Y'));
+INSERT INTO customer (id, name, address, age, date) VALUES (4, "Jack London", "Nevada", 33, STR_TO_DATE('06 21 2019','%m %d %Y'));
+

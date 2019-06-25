@@ -1,0 +1,32 @@
+{
+  "name": "mysql2xlxs",
+  "version": "1.0.0",
+  "description": "export MySQL table to XLSX",
+  "main": "index.js",
+  "scripts": {
+    "test": "test.js",
+    "start": "node index.js",
+    "debug": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/invegat/icn.git"
+  },
+  "keywords": [
+    "JavaScript",
+    "node.js",
+    "MySQL",
+    "Excel"
+  ],
+  "author": "Mark Oliver",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/invegat/icn/issues"
+  },
+  "homepage": "https://github.com/invegat/icn#readme",
+  "dependencies": {
+    "exceljs": "^1.12.2",
+    "json": "^9.0.6",
+    "mysql": "^2.17.1"
+  }
+}
