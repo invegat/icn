@@ -3,13 +3,26 @@ const { Client } = require('pg')
 const excel = require('exceljs');
 // postgres://juwwvohcorbolo:ce3d8c3e671044f8e15c880db71ce26146826e3f126da53a55788f7f0a7a54ae@ec2-23-23-173-30.compute-1.amazonaws.com:5432/d4l0sqaog7kpe0
 // Create a connection to the database
+require('dotenv').config();
+
+const DATABASE_URL = process.env.DATABASE_URL
+let d = {
+  'user' : 1,
+  'password': 2,
+  'host': 3,
+  'port': 4,
+  'database': 5
+}
+
+let re = /postgres\:\/\/(\w+)\:([a-z0-9]+)@([^:]+)\:(\d+)\/(\w+)/g
+let a = re.exec(DATABASE_URL)
 
 const client = new Client({
-    user: 'juwwvohcorbolo',
-    host: 'ec2-23-23-173-30.compute-1.amazonaws.com',
-    database: 'd4l0sqaog7kpe0',
-    password: 'ce3d8c3e671044f8e15c880db71ce26146826e3f126da53a55788f7f0a7a54ae',
-    port: 5432,
+    user: a[d.user],
+    password: a[d.password],
+    database: a[d.database],
+    host: a[d.host],
+    port: a[d.port],
     ssl: true
 })
 
